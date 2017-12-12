@@ -135,7 +135,7 @@ for i = 1:N
     % draw the force direction
     quiver(r(1), r(2), f_forcefield(1), f_forcefield(2),9);
       
-    if mod(i,1)==0
+    if mod(i,30)==0
         f_forcefield = 0.07 .* rotateMat(v, angle); %(rand(1,2)-0.5)./10
     end
     
