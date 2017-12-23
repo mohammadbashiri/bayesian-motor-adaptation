@@ -31,9 +31,7 @@ params(2).type    = 'CCW';
 ind = varargin{1};
 if ~nargin
     % if no arguement was given return experiment 1's parameters
-    params = params(1);
-elseif nargin > 1
-    
+    params = params(1);   
 else
     params = params(ind);
 end
