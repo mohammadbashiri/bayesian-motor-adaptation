@@ -53,16 +53,20 @@ Fx = Fmin:Fres:Fmax; Fy = Fx;
 Fmus    = zeros(2, Vsize, Vsize);
 Fsigmas = ones(2, Vsize, Vsize)*10;
 
-% let's change some of the sigma:
-Fsigmas(:, 30:70, 30:70) = 0.5;
+sspace = zeros(2, 2, Vsize, Vsize);
+sspace(:,1,:,:) = Fmus;
+sspace(:,2,:,:) = Fsigmas;
 
-Fsigmas(:, 40:60, 40:60) = 0.1;
+% let's change some of the sigma:
+sspace(:, 2, 30:70, 30:70) = 0.5;
+
+sspace(:, 2, 40:60, 40:60) = 0.1;
 
 %%
 % A function to initialize the state space based on given mu and sigma data
 
 % This function needs the mu and signam values for each specific state
-sspace = compSpace(Fmin, Fmax, Fres, Vmin, Vmax, Vres, Fmus, Fsigmas);
+% sspace = compSpace(Fmin, Fmax, Fres, Vmin, Vmax, Vres, Fmus, Fsigmas);
 
 %% Display the state space
 
