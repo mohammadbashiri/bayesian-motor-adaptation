@@ -8,8 +8,8 @@
 %%
 % Since we are assuming Gaussian distributions, we eill represent any
 % Gaussian distribution using a mean and variance.So, our state space for 
-% mean, as well as variance, would have 4 dimensions: (2, 2, Vx, Vy). 
-% The "2" is because we have mean, and variance, for Fx and Fy (multivariate Gaussian)
+% mean, as well as variance, would have 3 dimensions: (Vx, Vy, 2). 
+% The "2" is because we have mean and variance for 
 
 % Example: a specific point in state space would have a specific Vx and Vy,
 % and for this specific state we have a 2D distribution of force (X and Y).
