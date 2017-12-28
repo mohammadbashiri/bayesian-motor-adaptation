@@ -15,13 +15,8 @@ function [ Fx_adapt, Fy_adapt ] = useBelief( currentVx, currentVy, Vx, Vy, sspac
 % 2) Sample from this distribution to find Fx and Fy
 % 3) 
 
-[indVx, indVy] = findStateInd(currentVx, currentVy, Vx, Vy);
+[currentVx, ]
 
-% The mu and sigma for the force distribution of current state
-mu    = [sspace(1,1,indVx, indVy) sspace(2,1,indVx, indVy)];
-sigma = [sspace(1,2,indVx, indVy) 0;0 sspace(2,2,indVx, indVy)];
-
-[ Fx_adapt, Fy_adapt ] = mvnrnd(mu,sigma);
 
 end
 

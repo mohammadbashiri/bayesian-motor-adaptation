@@ -49,34 +49,26 @@ Fx = Fmin:Fres:Fmax; Fy = Fx;
 
 % This is what is saved in our implicit memory (assumption)
 % These are initially adjusted to whatever we have been training for, 
-% it can also be based on textual cue! so we retrieve another set of them
-Fmus    = zeros(2, Vsize, Vsize);
-Fsigmas = ones(2, Vsize, Vsize)*10;
+% it can also be based on textual cue! so we retrieve another set of the
+memory     = retrieve_memory(1);
+experiment = Exp_params(1);
 
 sspace = zeros(2, 2, Vsize, Vsize);
-sspace(:,1,:,:) = Fmus;
-sspace(:,2,:,:) = Fsigmas;
+sspace(:,1,:,:) = memory.Fmus;
+sspace(:,2,:,:) = memory.Fsigmas;
 
 % let's change some of the sigma:
-sspace(:, 2, 30:70, 30:70) = 0.5;
+% sspace(:, 2, 30:70, 30:70) = 0.5;
+sspace(:, 2, :, :) = 0.1;
 
-sspace(:, 2, 40:60, 40:60) = 0.1;
-
-%%
-% A function to initialize the state space based on given mu and sigma data
-
-% This function needs the mu and signam values for each specific state
-% sspace = compSpace(Fmin, Fmax, Fres, Vmin, Vmax, Vres, Fmus, Fsigmas);
+% Compute ideal force field values for each state
+idealF = compIdealF(experiment.compF, Vx, Vy); 
 
 %% Display the state space
 
-sspace_image = showSpace(sspace);
+sspace_image = showSpace(idealF, sspace);
 figure; imagesc(Vx, Vy, sspace_image); xlabel('V_x'); ylabel('V_y'); axis xy
 colorbar;
 
 % Display the prior for state with index (50, 50)
-figure; surf(Fx, Fy, sspace(:,:,75,75)); xlabel('F_x'); ylabel('F_y');
-
-% To display the progression in out state space we can always take the
-% maximum value of each states prior and plot them "image" of out state
-% space
+% this needs a function!
