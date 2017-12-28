@@ -70,5 +70,9 @@ sspace_image = showSpace(idealF, sspace);
 figure; imagesc(Vx, Vy, sspace_image); xlabel('V_x'); ylabel('V_y'); axis xy
 colorbar;
 
-% Display the prior for state with index (50, 50)
-% this needs a function!
+%% test useBelief function
+currentState = [1.2, 1.2];
+useBelief(currentState, Vx, Vy, sspace)
+
+%% test updateBelief function
+

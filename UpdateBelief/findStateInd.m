@@ -1,4 +1,4 @@
-function [ indVx, indVy ] = findStateInd( currentVx, currentVy, Vx, Vy )
+function [ indVx, indVy ] = findStateInd( currentState, Vx, Vy )
 % FINDSTATEIND finds the closest state variable to the given 
 % state (velocity) values
 
@@ -9,11 +9,13 @@ function [ indVx, indVy ] = findStateInd( currentVx, currentVy, Vx, Vy )
 % OUTPUT
 %   - CurrentVx, currentVy
 
-valVx = round(currentVx,1);
-valVy = round(currentVy,1);
+n = 1; % number of decimal points
 
-indVx = find(Vx == valVx);
-indVy = find(Vy == valVy);
+valVx = currentState(1);
+valVy = currentState(2);
+
+indVx = find(round(Vx,n) == round(valVx,n));
+indVy = find(round(Vy,n) == round(valVy,n));
 
 end
 
