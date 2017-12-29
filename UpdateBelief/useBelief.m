@@ -1,4 +1,4 @@
-function [ Fx_adapt, Fy_adapt ] = useBelief( currentState, sspace )
+function [ Fadapt ] = useBelief( currentState, sspace )
 % USEBELIEF returns the adaptation force (the force applied by the subject)
 %
 % INPUTS: 
@@ -18,16 +18,13 @@ function [ Fx_adapt, Fy_adapt ] = useBelief( currentState, sspace )
 % TODO: There is a need to implement some more code to deal with edge
 % cases here
 
-global Vx;
-global Vy;
-
-[indVx, indVy] = findStateInd(currentState, Vx, Vy);
+[indVx, indVy] = findStateInd(currentState);
 
 % The mu and sigma for the force distribution of current state
 mu    = [sspace(1,1,indVx, indVy) sspace(2,1,indVx, indVy)];
 sigma = [sspace(1,2,indVx, indVy) 0;0 sspace(2,2,indVx, indVy)];
 
-[ Fx_adapt, Fy_adapt ] = mvnrnd(mu,sigma);
+Fadapt = mvnrnd(mu,sigma);
 
 end
 

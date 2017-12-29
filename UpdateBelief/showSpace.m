@@ -1,6 +1,9 @@
+function [ sspace_image ] = showSpace( ideal_force, sspace )
+
 % The correct way to do this is to have the ideal force distribution for
 % each state. Then compute the probability of this ideal force
-% compensation in the force distribution given the state! 
+% compensation in the force distribution given the state! or the other way 
+% around 
 
 % we will implement this in th following section
 
@@ -12,7 +15,6 @@
 % OUTPUT:
 % - state space progression
 
-function [ sspace_image ] = showSpace( ideal_force, sspace )
 
 Vsize = size(sspace, 3);
 sspace_image = zeros(Vsize, Vsize);

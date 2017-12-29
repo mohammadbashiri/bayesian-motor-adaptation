@@ -1,4 +1,4 @@
-function [ complete_sspace ] = compSpace( Fx, Fy, sspace )
+function [ complete_sspace ] = compSpace( sspace )
 % COMPSPACE computes the complete 4D state space (including the force distributions)
 
 % INPUT:
@@ -9,13 +9,15 @@ function [ complete_sspace ] = compSpace( Fx, Fy, sspace )
 % OUTPUT:
 %   - complete state space, includnig the force distribution (NOT the mu and sigma)
 
+global Fx;
+global Fy;
 
 Fsize = length(Fx);
 
 complete_sspace = zeros(Fsize, Fsize, size(sspace,3), size(sspace,4));
 
-for indVx = 1:length(Vx)
-    for indVy = 1:length(Vy)
+for indVx = 1:size(sspace,3)
+    for indVy = 1:size(sspace,4)
         
         F = Gauss2d( Fx, sspace(1, 1, indVx, indVy), sspace(1, 2, indVx, indVy),...
                      Fy, sspace(2, 1, indVx, indVy), sspace(2, 2, indVx, indVy));
