@@ -22,36 +22,20 @@ F = Gauss2d( fx, fx_mu, fx_sigma, fy, fy_mu, fy_sigma);
 figure; % two different ways to display the distribution
 subplot(121); surf(fx, fy, F); xlabel('F_x'); ylabel('F_y');
 subplot(122); imagesc(fx, fy, F); xlabel('F_x'); ylabel('F_y'); axis xy
+%%
 
-%% 
-
-% what are informations that we need to create out state space?
-% 1) Maximum and minimum speeds that human exhibit during experiment
-% 2) State variable resolution, we could use 0.01! i dont know
-
-Vmin = -5;
-Vmax = 5;
-Vres = 0.1;
-Vx = Vmin:Vres:Vmax; Vy = Vx;
-Vsize   = length(Vx);
-% /////////////////////////////////////////////////////////////////
-
-% Now, each state needs its own force distribution, so what do we need?
-% 1) Max force and min force that subjects exhibit
-% 2) Force resolution
-% 3) The prior (i.e., the mean for the force distribution)
-% 4) Uncertainty in sensory input (the variance in our likelihood)
-
-Fmin = -5;
-Fmax = 5;
-Fres = 0.1;
-Fx = Fmin:Fres:Fmax; Fy = Fx;
+% initialize the global variables
+InitGlobals()
 
 % This is what is saved in our implicit memory (assumption)
 % These are initially adjusted to whatever we have been training for, 
 % it can also be based on textual cue! so we retrieve another set of the
 memory     = retrieve_memory(1);
 experiment = Exp_params(1);
+
+global Vx;
+global Vy;
+Vsize = length(Vx);
 
 sspace = zeros(2, 2, Vsize, Vsize);
 sspace(:,1,:,:) = memory.Fmus;
@@ -62,7 +46,7 @@ sspace(:,2,:,:) = memory.Fsigmas;
 sspace(:, 2, :, :) = 0.1;
 
 % Compute ideal force field values for each state
-idealF = compIdealF(experiment.compF, Vx, Vy); 
+idealF = compIdealF(experiment.compF); 
 
 %% Display the state space
 
@@ -72,7 +56,7 @@ colorbar;
 
 %% test useBelief function
 currentState = [1.2, 1.2];
-useBelief(currentState, Vx, Vy, sspace)
+useBelief(currentState, sspace)
 
 %% test updateBelief function
 

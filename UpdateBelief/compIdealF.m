@@ -1,4 +1,4 @@
-function [ ideal_F ] = compIdealF( func, Vx, Vy )
+function [ ideal_F ] = compIdealF( func )
 % COMPIDEALF computes the ideal force compensation values
 
 % This function computes the ideal force compensation values, given the
@@ -12,6 +12,8 @@ function [ ideal_F ] = compIdealF( func, Vx, Vy )
 % OUTPUT: 
 %   - ideal force distribution. dimension: (2, Vx, Vy);
 
+global Vx;
+global Vy;
 
 ideal_F = zeros(2, length(Vx), length(Vy));
 

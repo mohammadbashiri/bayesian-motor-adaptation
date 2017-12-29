@@ -19,7 +19,7 @@ global Fy; Fy = Fx;
 sensory_sigma = 5;
 gen_sigma = 5;
 global Likely_sigmas; Likely_sigmas = [sensory_sigma 0; 0 sensory_sigma];
-global GF_sigmas; GF_sigmas = [gem_sigma 0; 0 gen_sigma];
+global GF_sigmas; GF_sigmas = [gen_sigma 0; 0 gen_sigma];
 
 end
 
