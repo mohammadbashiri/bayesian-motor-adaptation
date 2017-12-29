@@ -24,7 +24,8 @@ subplot(121); surf(fx, fy, F); xlabel('F_x'); ylabel('F_y');
 subplot(122); imagesc(fx, fy, F); xlabel('F_x'); ylabel('F_y'); axis xy
 %%
 
-% initialize the global variables
+% initialize the global variables (mainly contains the biological aspects 
+% of the subject)
 InitGlobals()
 
 % This is what is saved in our implicit memory (assumption)
