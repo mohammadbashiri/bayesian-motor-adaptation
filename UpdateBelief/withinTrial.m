@@ -1,10 +1,12 @@
-clear all;
+clear all
 % NOTE: everthing is represented in rows -> [x, y]
 
-% initials the global variables
-InitGlobals();
+% define mass ad force
+global m; m = 0.150;          % [kg] -> average mass of the hand
 
-exp = Exp_params(1);
+% force field
+angle = 90;
+type = 'NULL'; % 'FORCEFIELD'
 
 % Position Information - this is task dependent
 startPos  = [0, 0];
@@ -34,7 +36,7 @@ for i = 2:N
     % Minimizing total jerk:
     [r(i,:), v(i,:), a(i,:)] = compMinJerk(startPos, targetPos, period, t);
     
-    F_forcefield = 20*exp.compF(v_actual(i-1,:));
+    F_forcefield = 20*rotateMat(v_actual(i-1,:), angle);
     F_adapt = -0.8 * F_forcefield;
     [r_actual(i,:), v_actual(i,:), a_actual(i,:)] = updateMinJerk(r(i-1,:), r_actual(i-1,:),...
                                                                   v(i-1,:), v_actual(i-1,:),...

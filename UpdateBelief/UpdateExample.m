@@ -23,6 +23,7 @@ memory     = retrieve_memory(1);
 % some experiment-specific parameters
 experiment = Exp_params(1);
 
+
 global Vx;
 global Vy;
 Vsize = length(Vx);
@@ -30,7 +31,6 @@ Vsize = length(Vx);
 sspace = zeros(2, 2, Vsize, Vsize);
 sspace(:,1,:,:) = memory.Fmus;
 sspace(:,2,:,:) = memory.Fsigmas;
-
 % let's change some of the sigma:
 % sspace(:, 2, 30:70, 30:70) = 0.5;
 sspace(:, 2, :, :) = 0.2;
