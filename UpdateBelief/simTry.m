@@ -1,4 +1,4 @@
-close all
+close all; clear all;
 
 % initialize the global variables (mainly contains the biological aspects 
 % of the subject, except memory)
@@ -9,7 +9,7 @@ InitGlobals()
 memory     = retrieve_memory(1);
 
 % some experiment-specific parameters
-experiment = Exp_params(1);
+exp = Exp_params(1);
 
 % initialize the state space
 global Vx; % biological range of Vx
@@ -21,15 +21,15 @@ sspace(:,1,:,:) = memory.Fmus; % memory retrieval
 sspace(:,2,:,:) = memory.Fsigmas; % memory retrieval
 
 % Compute ideal force field values for each state
-idealF = compIdealF(experiment.compF); 
+idealF = compIdealF(exp.compF); 
 
+% try to set the mean of the prior to the ideal force! this is ideal
+% adaptation!
+% sspace(:,1,:,:) = idealF*15;
 
 % Position Information - this is task dependent
 startPos  = [0, 0];
 targetPos = [5, 10];
-
-% forces
-F_forcefield   = [0 0];
 
 % simulation params
 dt     = 0.1;    % [s]  -> step size
