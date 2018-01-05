@@ -25,11 +25,11 @@ idealF = compIdealF(exp.compF);
 
 % try to set the mean of the prior to the ideal force! this is ideal
 % adaptation!
-% sspace(:,1,:,:) = idealF*15;
+sspace(:,1,:,:) = idealF;
 
 % Position Information - this is task dependent
 startPos  = [0, 0];
-targetPos = [5, 10];
+targetPos = [-5, 10];
 
 % simulation params
 dt     = 0.1;    % [s]  -> step size
@@ -52,7 +52,7 @@ for i = 2:N
     % Minimizing total jerk:
     [r(i,:), v(i,:), a(i,:)] = compMinJerk(startPos, targetPos, period, t);
     
-    F_forcefield = 20*exp.compF(v_actual(i-1,:));
+    F_forcefield = exp.compF(v_actual(i-1,:));
     F_adapt = -useBelief(v_actual(i-1,:), sspace);
     [r_actual(i,:), v_actual(i,:), a_actual(i,:)] = updateMinJerk(r(i-1,:), r_actual(i-1,:),...
                                                                   v(i-1,:), v_actual(i-1,:),...
