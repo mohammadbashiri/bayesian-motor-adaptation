@@ -8,7 +8,10 @@ errmsg = strcat('\nToo many arguements. The function only gets one input.',...
 assert (length(varargin) < 2, sprintf(errmsg));
 
 % this should preferrably be an input to the function!
-Vsize = 101;
+global Vx;
+global Vy;
+
+Vsize = numel(Vx); % TODO: must come from Globals!!! DONE!
 
 memory(1).name    = 'null';
 memory(1).Fmus    = zeros(2, Vsize, Vsize);
@@ -21,6 +24,8 @@ memory(2).Fsigmas = ones(2, Vsize, Vsize)*10;
 memory(3).name    = 'CCW';
 memory(3).Fmus    = zeros(2, Vsize, Vsize);
 memory(3).Fsigmas = ones(2, Vsize, Vsize)*10;
+
+% ...
 
 ind = varargin{1};
 if ~nargin

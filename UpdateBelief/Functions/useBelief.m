@@ -23,7 +23,6 @@ function [ Fadapt ] = useBelief( currentState, sspace )
 % The mu and sigma for the force distribution of current state
 mu    = [sspace(1,1,indVx, indVy) sspace(2,1,indVx, indVy)];
 sigma = [sspace(1,2,indVx, indVy) 0;0 sspace(2,2,indVx, indVy)];
-
 Fadapt = mvnrnd(mu,sigma);
 
 end
