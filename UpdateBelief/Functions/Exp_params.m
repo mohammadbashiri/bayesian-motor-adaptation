@@ -43,7 +43,7 @@ end
 
 % compute force applied for CW force field
 function [force] = compForce1(v)
-    k = 1;  
+    k = 15;  
     RMat = [0 -1;  % angle = 90;
             1  0];
     force = k * v * RMat;

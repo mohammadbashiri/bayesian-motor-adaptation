@@ -6,7 +6,7 @@ InitGlobals()
 
 % We have some implicit memory saved! and we can retrieve that memory.
 % it can be based on textual cue!
-memory     = retrieve_memory(1);
+memory     = retrieve_memory(1); % (1) is NULL field
 
 % some experiment-specific parameters
 exp = Exp_params(1);
@@ -52,7 +52,7 @@ for i = 2:N
     % Minimizing total jerk:
     [r(i,:), v(i,:), a(i,:)] = compMinJerk(startPos, targetPos, period, t);
     
-    F_forcefield = exp.compF(v_actual(i-1,:));
+    F_forcefield = exp.compF(v_actual(i-1,:))
     F_adapt = -useBelief(v_actual(i-1,:), sspace);
     [r_actual(i,:), v_actual(i,:), a_actual(i,:)] = updateMinJerk(r(i-1,:), r_actual(i-1,:),...
                                                                   v(i-1,:), v_actual(i-1,:),...
