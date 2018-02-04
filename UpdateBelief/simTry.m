@@ -18,9 +18,11 @@ global Vx; % biological range of Vx
 global Vy; % biological range of Vy
 Vsize = length(Vx);
 
-sspace = zeros(2, 2, Vsize, Vsize); % state space initialization
-sspace(:,1,:,:) = memory.Fmus; % memory retrieval
-sspace(:,2,:,:) = memory.Fsigmas; % memory retrieval
+load('training1.mat');
+
+% sspace = zeros(2, 2, Vsize, Vsize); % state space initialization
+% sspace(:,1,:,:) = memory.Fmus; % memory retrieval
+% sspace(:,2,:,:) = memory.Fsigmas; % memory retrieval
 
 
 % sspace = load('training1.mat');
@@ -56,7 +58,7 @@ saveVy = [];
 
 % here is were the loop should be implemented
 figure(1);
-for trials = 1:400
+for trials = 1:10
     clf;
     disp('Trial')
     disp(trials)
@@ -101,7 +103,7 @@ for trials = 1:400
 
         % Display the trajectory - velocity
         subplot(122); grid; hold on;
-        scatter(v_actual(i-1,1), v_actual(i-1,2), 'o'); xlim([-15,15]); ylim([-50,50]);
+        scatter(v_actual(i-1,1), v_actual(i-1,2), 'o'); xlim([-15,15]); ylim([-10,10]);
 
         % Display the trajectory - position
         subplot(121); grid; hold on;
@@ -125,15 +127,15 @@ for trials = 1:400
 %     colorbar;
 
 end
-figure;
-sspace_image = showSpace(idealF, sspace);
-imagesc(Vy, Vx, sspace_image'); xlabel('V_x'); ylabel('V_y'); axis xy
-colorbar;
+% figure;
+% sspace_image = showSpace(idealF, sspace);
+% imagesc(Vy, Vx, sspace_image'); xlabel('V_x'); ylabel('V_y'); axis xy
+% colorbar;
 
 figure;
-hist3([saveVx' saveVy]);
+hist3([saveVx' saveVy']);
 
 figure;
 plot(sqrt(r_actual(:,1).^2 + r_actual(:,2).^2)); hold on
 plot(sqrt(v_actual(:,1).^2 + v_actual(:,2).^2));
-plot(sqrt(a_actual(:,1).^2 + a_actual(:,2).^2));
+% plot(sqrt(a_actual(:,1).^2 + a_actual(:,2).^2));

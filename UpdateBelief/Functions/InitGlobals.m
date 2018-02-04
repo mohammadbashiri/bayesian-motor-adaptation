@@ -2,9 +2,9 @@ function [ ] = InitGlobals()
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
-global Vmin; Vmin = -100;
-global Vmax; Vmax = 100;
-global Vres; Vres = 1;
+global Vmin; Vmin = -10;
+global Vmax; Vmax = 10;
+global Vres; Vres = .1;
 
 global Vx; Vx = Vmin:Vres:Vmax;
 global Vy; Vy = Vx;
