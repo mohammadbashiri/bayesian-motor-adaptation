@@ -130,6 +130,8 @@ sspace_image = showSpace(idealF, sspace);
 imagesc(Vy, Vx, sspace_image'); xlabel('V_x'); ylabel('V_y'); axis xy
 colorbar;
 
+figure;
+hist3([saveVx' saveVy]);
 
 figure;
 plot(sqrt(r_actual(:,1).^2 + r_actual(:,2).^2)); hold on

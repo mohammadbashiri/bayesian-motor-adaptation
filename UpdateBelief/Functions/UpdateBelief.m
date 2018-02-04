@@ -39,7 +39,7 @@ for indX = strtVx:endVx
 %         disp('in update: before')
 %         priorSpace(:,1,indX,indY)
         
-        posteriorBelief = stateLikelihood * 10 .* priorBelief;  
+        posteriorBelief = stateLikelihood * 1000 .* priorBelief;  
 
         pState = sum(posteriorBelief(:)) * Fres^2;            
         posteriorBelief = posteriorBelief/pState;
@@ -78,9 +78,9 @@ for indX = strtVx:endVx
         end
 
         posteriorSpace(1,1,indX,indY) = Fx_mu;
-        posteriorSpace(1,2,indX,indY) = Fx_sigma;
+        posteriorSpace(1,2,indX,indY) = Fx_sigma^2;
         posteriorSpace(2,1,indX,indY) = Fy_mu;
-        posteriorSpace(2,2,indX,indY) = Fy_sigma;
+        posteriorSpace(2,2,indX,indY) = Fy_sigma^2;
 %         disp('in update: after')
 %         posteriorSpace(:, 1, indX, indY)
 
