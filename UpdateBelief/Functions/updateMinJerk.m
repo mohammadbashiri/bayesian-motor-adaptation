@@ -1,9 +1,7 @@
 function [ r_out, v_out, a_out ] = updateMinJerk( r, r_actual, v, v_actual, a, F_forcefield, F_adapt, dt )
-%UNTITLED Summary of this function goes here
-%   Detailed explanation goes here
+
     global m;
 
-%     F_adapt = -0.8*F_forcefield;
     F_jerk  = m.*a;
     F_error = 25.*(r - r_actual)+ 5.*(v - v_actual);
     F_hand  = F_jerk + F_error + F_adapt;

@@ -31,6 +31,7 @@ sspace(:,2,:,:) = memory.Fsigmas; % memory retrieval
 % Compute ideal force field values for each state
 idealF = compIdealF(exp.compF, Vx, Vy); 
 
+
 % Position Information - this is task dependent
 startPos  = [0, 0];
 targetPos = [0, 10];
@@ -48,8 +49,10 @@ v_actual  = zeros(N,2);
 a         = zeros(N,2); % initial acceleration
 a_actual  = zeros(N,2);
 
+
 saveVx = [];
 saveVy = [];
+
 
 % recrod forces
 adapt_forces = zeros(2, N, trial_no);
@@ -71,7 +74,7 @@ for trials = 1:trial_no
 
         % Compute the forcefield
         F_forcefield = exp.compF(v_actual(i-1,:)) .* 1;
-        % ideal_force(:, i)  = exp.compF(v_actual(i-1,:));
+%         ideal_force(:, i)  = exp.compF(v_actual(i-1,:));
 
         % Use the implicit memory to compute the adaptation force
         F_adapt = -useBelief(v_actual(i-1,:), sspace);
@@ -83,7 +86,7 @@ for trials = 1:trial_no
                                                                       a(i-1,:), F_forcefield, F_adapt, dt);
         
         [indx, indy] = findStateInd(v_actual(i-1,:));                               
-        % disp(sspace(:,2,indx, indy));  % displaying the mean of forces at the occured point in velocity space
+%         disp(sspace(:,2,indx, indy));  % displaying the mean of forces at the occured point in velocity space
                                                                   
         % Update the implicit memory for the current velocity
         sspace = UpdateBelief(sspace, v_actual(i-1,:), F_forcefield, doGeneralization);        
@@ -99,7 +102,7 @@ for trials = 1:trial_no
             % draw the start and target points
             scatter(startPos(1), startPos(2), 'filled', 'k');
             scatter(targetPos(1), targetPos(2), 'filled', 'r'); 
-
+    % 
             drawnow;
             pause(0.01)
         end
