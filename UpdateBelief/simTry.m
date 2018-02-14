@@ -117,11 +117,6 @@ for trials = 1:trial_no
         
     end
 end
-% 
-% figure;
-% sspace_image = showSpace(idealF, sspace);
-% imagesc(Vy, Vx, sspace_image'); xlabel('V_x'); ylabel('V_y'); axis xy
-% colorbar;
 
 % force compendaton graphs
 load('idealForce1.mat');
@@ -138,7 +133,6 @@ ideal_force_area  = squeeze(sum(ideal_force,2));
 figure; plot(adapt_forces_area(1,:)/ideal_force_area(1)); grid;
 xlabel('Trials'); ylabel('Force Compensation');
 
-
 figure;
 hist3([saveVx' saveVy']);
 
@@ -147,5 +141,3 @@ plot(sqrt(r_actual(:,1).^2 + r_actual(:,2).^2)); hold on
 plot(sqrt(v_actual(:,1).^2 + v_actual(:,2).^2));
 % plot(sqrt(a_actual(:,1).^2 + a_actual(:,2).^2));
 legend('position', 'velocity');
-
-% figure; plot(ideal_force(1,:));

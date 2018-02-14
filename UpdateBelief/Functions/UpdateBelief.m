@@ -38,10 +38,9 @@ for indX = strtVx:endVx
         Fx_var_prior  = squeeze(priorSpace(1, 2, indX, indY));
         Fy_var_prior  = squeeze(priorSpace(2, 2, indX, indY));
 
-%         Gcoef_boundary = ((max(Vx) - abs(currentState(1))) + (max(Vy) - abs(currentState(2))))/(2*mean(max(Vx), max(Vy)));
+        % Gcoef_boundary = ((max(Vx) - abs(currentState(1))) + (max(Vy) - abs(currentState(2))))/(2*mean(max(Vx), max(Vy)));
         Gcoef_boundary = ((50 - abs(currentState(1))) + (50 - abs(currentState(2))))/100;
 %         Gcoef_boundary = 0.7;
-%         disp(size(Gcoef_boundary));
         if Gcoef > Gcoef_boundary
             Fx_mu_prior  = (Fx_mu_sense * Fx_var_prior + Fx_mu_prior * Fx_var_sense)/(Fx_var_sense + Fx_var_prior);
             Fy_mu_prior  = (Fy_mu_sense * Fy_var_prior + Fy_mu_prior * Fy_var_sense)/(Fy_var_sense + Fy_var_prior);
