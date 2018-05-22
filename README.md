@@ -66,12 +66,14 @@ shows the observed trajectory in velocity space.
 
 <br>
 <div align="center">
-    <div style="float:left; margin-right:5px; height:50%; width:50%";>
-        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" />
+    <div style="float:left; margin-right:5px;>
+        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" 
+         height="200" width="200"/>
         <p style="text-align:center;">This is image 1</p>
     </div>
-    <div style="float:left; margin-right:5px; height:50%; width:50%";>
-        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" />
+    <div style="float:left; margin-right:5px;>
+        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" 
+         height="200" width="200"/>
         <p style="text-align:center;">This is image 2</p>
     </div>
 </div>
