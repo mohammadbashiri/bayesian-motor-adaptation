@@ -87,8 +87,8 @@ shows the observed trajectory in velocity space.
 </p>
 
 ============== TODO ===============<br>
-here goes the figure for the expansion of each state variable force distribution
-and update of prior distribution for several trials
+- Add the figure for the expansion of each state variable force distribution, and
+- Update of prior distribution for several trials
 <br>===================================
 
 Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
