@@ -2,10 +2,7 @@
     <dev> 
     Bayesian Motor Adaptation
     </dev>
-    <img>
-    <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/logo.png" alt="formula1">
-    </img>
-    
+    <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/logo.png" alt="logo" heigt="50" width="50">   
 </h1>
 
 
