@@ -87,9 +87,9 @@ shows the observed trajectory in velocity space.
 </p>
 
 ============== TODO ===============<br>
-- Add the figure for the expansion of each state variable force distribution, and
-- Update of prior distribution for several trials
-<br>===================================
+Add the figure for the expansion of each state variable force distribution, and <br>
+Update of prior distribution for several trials <br>
+===================================
 
 Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
 state, and we need to update out belief about the force that is expected, given this state.
@@ -102,6 +102,9 @@ influence the prior of state 1.
 
 The experience gained in one state could be generalized to another state. This behavior is also observed in human
 behavior [reference]. 
+============== TODO ===============<br>
+Add the explanation <br>
+===================================
 
 ### The need for a model that considers within-trial adaptation
 An obvious example of within-trials adaptation (or correction) is the first force-field trial. In the very first trial, we
@@ -121,7 +124,9 @@ apply a force on manipulandum that result in a net force which takes the hand to
 the equation(s) above need a little bit of modification:
 
 ### A possible explanation for contextual learning
-
+============== TODO ===============<br>
+Add the explanation <br>
+===================================
 
 ### Results
 one common way to characterize subject's progress in adaptation is by means of measuring force compensation.
@@ -154,3 +159,6 @@ specific trials for the whole trajectory. Figure 6 shows the coverage percentage
 We would like to thank Prof. David Franklin for his amazing teaching style, and 
 kind supervision throughout this project. We also, deeply appreciate Justinas Cesonis's
 invaluable support for the course, as well as the project.
+
+### References
+[1] Shadmeh's work on generalizations
