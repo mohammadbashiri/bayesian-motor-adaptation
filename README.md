@@ -29,6 +29,7 @@ variable **hand velocity**.
 <p align="center">
 	<br>
 	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1">
+    <figcaption>Fig1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
 </p>
 
 In every state (i.e., specific velocity in x and y direction), we expect a force (the prior) 
@@ -63,13 +64,17 @@ updating our belief about the environment dynamics we are interacting with. Figu
 a desired trajectory and observed trajectory (influenced by the force field) in position space. Figure 2b
 shows the observed trajectory in velocity space.
 
-<p align="center">
-	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" alt="Fig2a">
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" alt="Fig2b>
-</p>
 
-
+<div align="center">
+    <div style="float:left;margin-right:5px;">
+        <img src=https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg"  />
+        <p style="text-align:center;">This is image 1</p>
+    </div>
+    <div style="float:left;margin-right:5px;">
+        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" />
+        <p style="text-align:center;">This is image 2</p>
+    </div>
+</div>
 
 ### Acknowledgment
 
