@@ -1,6 +1,6 @@
 <h1 align="center"> Bayesian Motor Adaptation </h1>
 
-### Disclaimer
+#### Disclaimer
 This is a short report of a mini project which was done as part of a course
 called ***Computational Mechanisms of Learning*** in Technical University of Munich.
 
@@ -29,7 +29,7 @@ variable **hand velocity**.
 <p align="center">
 	<br>
 	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1">
-    <figcaption>Fig1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
+    <figcaption align="center"> Fig1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
 </p>
 
 In every state (i.e., specific velocity in x and y direction), we expect a force (the prior) 
@@ -53,7 +53,7 @@ which is then used as the prior in the next trial for the same state.
 Moreover, due to generalization, this posterior, which is an update for the prior of this specific state,
 would change the priors for other states, including the onses within the same trial.
 
-### An example
+#### An example
 
 in the very first trial, our prior is according to the null field. In other words, we have gotten some
 experience over the years to move ourselves (i.e., our hand) within the dynamics of the air around us,
@@ -76,6 +76,44 @@ shows the observed trajectory in velocity space.
     </div>
 </div>
 <br>
+
+============== here goes the firgure for the expansion of each state variable force distribution ============
+============== and update of prior distribution for several trials ==========================================
+
+Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
+state, and we need to update out belief about the force that is expected, given this state.
+
+Note that in Figure 4 which illustrates the update of prior force distribution given a specific state, the generalization
+is ignored - not only we use the posterior of state 1 to update the prior for future states, but also future states would 
+influence the prior of state 1.
+
+### Generalization
+
+The experience gained in one state could be generalized to another state. This behavior is also observed in human
+behavior [reference]. 
+
+### The need for a model that considers within-trial adaptation
+An obvious example of within-trials adaptation (or correction) is the first force-field trial. In the very first trial, we
+are still new to the force field dynamics – no experience. However, the influence of the experience gained from the
+first few states would help us to form a rough estimation about the states to come, and at the end, even within the
+first trial, we would end up in target.
+
+### The role of the goal
+Up to this point, one important factor, which is ignored in this description, is the goal. The goals defines a
+default force that is always applied to achieve it. Moreover, to reach the goal, or to be on the desired
+trajectory, we would try to cancel out all other forces applied, so that the net force is the force that would
+direct us to the goal. During the trajectory, the position of our hand changes, hence the direction (and
+amplitude) of the force that we need to apply to reach to the target. Therefore, I think the force that we
+apply is actually not opposite to prior, but the addition of opposite of prior and a force towards the goal.
+To sum this up: the objective is to estimate the force that is applied on our hand correctly so we could
+apply a force on manipulandum that result in a net force which takes the hand towards the target. In fact,
+the equation(s) above need a little bit of modification:
+
+### A possible explanation for contextual learning
+
+
+### Results
+
 
 ### Acknowledgment
 
