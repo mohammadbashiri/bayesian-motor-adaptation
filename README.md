@@ -35,7 +35,7 @@ variable **hand velocity**.
 <p align="center">
 	<br>
 	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1" height="250" width="250">
-    <figcaption align="center"> Fig1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
+    <figcaption align="center"> Fig 1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
 </p>
 
 In every state (i.e., specific velocity in x and y direction), we expect a force (the prior) 
@@ -81,7 +81,7 @@ shows the observed trajectory in velocity space.
 	<br>
 	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable_trajectory.png" alt="Fig1">
     <figcaption align="center"> 
-        Fig1. (left) trajectory in velocity space while exposed. (right) trajectory in position space in null field (green)
+        Fig 2. (left) trajectory in velocity space while exposed. (right) trajectory in position space in null field (green)
         versus force field (red)
     </figcaption>
 </p>
@@ -124,10 +124,33 @@ the equation(s) above need a little bit of modification:
 
 
 ### Results
+one common way to characterize subject's progress in adaptation is by means of measuring force compensation.
+given the velocity of subject's hand, since the force applied by the force field is a function of hand's velocity,
+we can compute the ideal force that must be applied by the subject to completely cancel out the force field.
+Along the trajectory (going from starting point to target) we can compute the ideal force compensation, and compare
+that with the force applied by the subject. we can compare the areas under the graph for the ideal and subject's
+force compensation and the higher the percentage of coverage of ideal force compensation area by the subject's 
+force compensation, the better. Figure 5 shows the force compensation exhibited by the simulation of our model for 
+specific trials for the whole trajectory. Figure 6 shows the coverage percentage over many trials.
 
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceTrials.png" alt="Fig1">
+    <figcaption align="center"> 
+        Fig 5. force compensation during trajectory for trial number 1, 10, 20, 30, and 50
+    </figcaption>
+</p>
+
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceCompensation.jpg" alt="Fig1">
+    <figcaption align="center"> 
+        Fig 6. Froce compensation percentage over trials
+    </figcaption>
+</p>
 
 ### Acknowledgment
 
 We would like to thank Prof. David Franklin for his amazing teaching style, and 
-kind supervision throughout this project. We also, deeply appreciate Justinas ...'s
-help in 
+kind supervision throughout this project. We also, deeply appreciate Justinas Cesonis's
+invaluable support for the course, as well as the project.
