@@ -71,7 +71,7 @@ shows the observed trajectory in velocity space.
         <p style="text-align:center;">This is image 1</p>
     </div>
     <div style="float:left;margin-right:5px;">
-        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" height="100" width="100%" />
+        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" height="100" width="100" />
         <p style="text-align:center;">This is image 2</p>
     </div>
 </div>
