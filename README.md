@@ -67,7 +67,7 @@ shows the observed trajectory in velocity space.
 <br>
 <div align="center">
     <div style="float:left;margin-right:5px;">
-        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" height="50%" width="50%" />
+        <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" height="50" width="50" />
         <p style="text-align:center;">This is image 1</p>
     </div>
     <div style="float:left;margin-right:5px;">
