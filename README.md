@@ -45,7 +45,7 @@ that expresses the uncertainty in our sensory input. Hence the likelihood would 
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/likelihood.jpg" alt="formula1">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/likelihood.JPG" alt="formula1">
 </p>
 
 After esitmating the applied force, we would then update our prior, resulting in a posterior distribution,
@@ -53,7 +53,7 @@ which is then used as the prior in the next trial for the same state.
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/bayes.jpg" alt="formula2">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/bayes.JPG" alt="formula2">
 </p>
 
 Moreover, due to generalization, this posterior, which is an update for the prior of this specific state,
