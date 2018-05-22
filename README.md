@@ -43,12 +43,18 @@ Since the force field is a function of the hand velocity (i.e., the state variab
 the likelihood as a Gaussian that has a mean around appleid force by the force field, and a variance 
 that expresses the uncertainty in our sensory input. Hence the likelihood would be:
 
-==================== here gous the formula for the normal distribution ============================
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/likelihood.jpg" alt="formula1">
+</p>
 
 After esitmating the applied force, we would then update our prior, resulting in a posterior distribution,
 which is then used as the prior in the next trial for the same state.
 
-==================== bayes formula for updating the prior about applied force =====================
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/bayes.jpg" alt="formula2">
+</p>
 
 Moreover, due to generalization, this posterior, which is an update for the prior of this specific state,
 would change the priors for other states, including the onses within the same trial.
