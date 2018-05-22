@@ -28,7 +28,7 @@ variable **hand velocity**.
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1" height="150" width="150">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1" height="250" width="250">
     <figcaption align="center"> Fig1. - A view of a workspace. black dot is the starting point, and the red dots are the possible targets.</figcaption>
 </p>
 
