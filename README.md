@@ -1,4 +1,13 @@
-<h1 align="center"> Bayesian Motor Adaptation </h1>
+<h1 align="center"> 
+    <dev> 
+    Bayesian Motor Adaptation
+    </dev>
+    <img>
+    <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/logo.png" alt="formula1">
+    </img>
+    
+</h1>
+
 
 #### Disclaimer
 This is a short report of a mini project which was done as part of a course
@@ -80,10 +89,10 @@ shows the observed trajectory in velocity space.
     </figcaption>
 </p>
 
-
-
-============== here goes the firgure for the expansion of each state variable force distribution ============
-============== and update of prior distribution for several trials ==========================================
+============== TODO ===============<br>
+here goes the figure for the expansion of each state variable force distribution
+and update of prior distribution for several trials
+<br>===================================
 
 Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
 state, and we need to update out belief about the force that is expected, given this state.
