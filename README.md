@@ -64,17 +64,18 @@ updating our belief about the environment dynamics we are interacting with. Figu
 a desired trajectory and observed trajectory (influenced by the force field) in position space. Figure 2b
 shows the observed trajectory in velocity space.
 
-
-<div class="image123">
-    <div style="float" width="50%" height="50%">
+<br>
+<div align="center">
+    <div style="float:left;margin-right:5px;">
         <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/trajectories.jpg" />
         <p style="text-align:center;">This is image 1</p>
     </div>
-    <div style="float" width="50%" height="50%">
+    <div style="float:left;margin-right:5px;">
         <img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/state_variable(while).jpg" />
         <p style="text-align:center;">This is image 2</p>
     </div>
 </div>
+<br>
 
 ### Acknowledgment
 
