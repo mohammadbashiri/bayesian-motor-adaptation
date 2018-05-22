@@ -16,6 +16,8 @@ Contributors to the project are:
 - Raja Judeh, and
 - Mohammad Bashiri
 
+### Introduction
+
 A common task in human motor adaptation experiments is the simple 2D trajectory movement. 
 In such task, subject starts from an initial position and she/he is instructed to reach the 
 target position, within reasonable time limit.
