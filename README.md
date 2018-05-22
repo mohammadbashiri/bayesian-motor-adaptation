@@ -32,7 +32,7 @@ leaves us a with net force that takes us towards the goal (f_goal).
  
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/AttentionEEG/blob/master/Fig/stim2.png" alt="Fig1">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/workspace.jpg" alt="Fig1">
 </p>
 
 ### Acknowledgment
