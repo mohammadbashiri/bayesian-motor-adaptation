@@ -92,7 +92,7 @@ shows the observed trajectory in velocity space.
 --------- TODO ---------<br>
 Add the figure for the expansion of each state variable force distribution, and <br>
 Update of prior distribution for several trials <br>
---------- TODO ---------<br>
+--------- TODO ---------<br><br>
 
 Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
 state, and we need to update out belief about the force that is expected, given this state.
