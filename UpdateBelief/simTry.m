@@ -4,7 +4,7 @@ close all; clear all;
 % of the subject, except memory)
 InitGlobals()
 
-doGeneralization = true;
+doGeneralization = false;
 
 % We have some implicit memory saved! and we can retrieve that memory.
 % it can be based on textual cue!

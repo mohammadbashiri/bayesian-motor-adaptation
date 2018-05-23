@@ -158,11 +158,19 @@ specific trials for the whole trajectory. Figure 6 shows the coverage percentage
     </figcaption>
 </p>
 
-Below is a short illustration of simulation.
+
+Below is a short illustration of simulation without generalization.
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim.gif" alt="Fig7">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim_wo_gen.gif" alt="Fig7">
+</p>
+
+Below is a short illustration of simulation with generalization.
+
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim_w_gen.gif" alt="Fig7">
 </p>
 
 ### Acknowledgment
