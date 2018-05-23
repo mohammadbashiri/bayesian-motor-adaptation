@@ -88,16 +88,19 @@ shows the observed trajectory in velocity space.
     </figcaption>
 </p>
 
-<br>
---------- TODO ---------<br>
-Add the figure for the expansion of each state variable force distribution, and <br>
-Update of prior distribution for several trials <br>
---------- TODO ---------<br><br>
-
 Now, after interacting with the force field, we have a posterior of the force distribution given a specific velocity 
 state, and we need to update out belief about the force that is expected, given this state.
 
-Note that in Figure 4 which illustrates the update of prior force distribution given a specific state, the generalization
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/exploded.png" alt="Fig1">
+    <figcaption align="center"> 
+        Fig 3. An exploded view of the force distribution for a single state, including an example of updating the "belief".
+    </figcaption>
+</p>
+
+
+Note that in Figure 3 which illustrates the update of prior force distribution given a specific state, the generalization
 is ignored - not only we use the posterior of state 1 to update the prior for future states, but also future states would 
 influence the prior of state 1.
 
@@ -144,17 +147,17 @@ specific trials for the whole trajectory. Figure 6 shows the coverage percentage
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceTrials.png" alt="Fig5">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceTrials.png" alt="Fig4">
     <figcaption align="center"> 
-        Fig 5. force compensation during trajectory for trial number 1, 10, 20, 30, and 50
+        Fig 4. force compensation during trajectory for trial number 1, 10, 20, 30, and 50
     </figcaption>
 </p>
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceCompensation.jpg" alt="Fig6">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceCompensation.jpg" alt="Fig5">
     <figcaption align="center"> 
-        Fig 6. Froce compensation percentage over trials
+        Fig 5. Froce compensation percentage over trials
     </figcaption>
 </p>
 
@@ -163,7 +166,7 @@ Below is a short illustration of simulation without generalization.
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim_wo_gen.gif" alt="Fig7">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim_wo_gen.gif" alt="Fig6">
 </p>
 
 Below is a short illustration of simulation with generalization.
