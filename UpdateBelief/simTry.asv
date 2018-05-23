@@ -39,7 +39,7 @@ targetPos = [0, 10];
 dt       = 0.01;    % [s]  -> step size
 period   = 2;     % [s]
 N        = ceil(period/dt); 
-trial_no = 100;
+trial_no = 10;
 
 r         = zeros(N,2); % initial position
 r_actual  = zeros(N,2);
@@ -54,6 +54,8 @@ saveVy = [];
 % recrod forces
 adapt_forces = zeros(2, N, trial_no);
 ideal_force  = zeros(2, N);
+
+movie_ind = 1;
 
 % here is where the loop should be implemented
 figure('units','normalized','outerposition',[0 0 1 1]);
@@ -93,7 +95,7 @@ for trials = 1:trial_no
             % Display the trajectory - velocity
             subplot(122); hold on;
             scatter(v_actual(i-1,1), v_actual(i-1,2), 'filled', 'o'); xlim([-15,15]); ylim([-50,50]);
-            xlabel('V_{x}'); ylabel('V_{y}');
+            xlabel
             
             % Display the trajectory - position
             subplot(121); hold on;
@@ -101,13 +103,14 @@ for trials = 1:trial_no
             % draw the start and target points
             scatter(startPos(1), startPos(2), 100, 'filled', 'k');
             scatter(targetPos(1), targetPos(2), 100, 'filled', 'r'); 
-            xlabel('X'); ylabel('Y');
             
             title(['trial number: ', num2str(trials)])
             
             drawnow;
             pause(0.01)
             
+%             M(movie_ind) = getframe;
+%             movie_ind = movie_ind + 1;
         end
         
         saveVx = [saveVx v_actual(i-1,1)];
@@ -117,26 +120,26 @@ for trials = 1:trial_no
     end
 end
 
-% force compendaton graphs
-load('idealForce1.mat');
-figure; plot(adapt_forces(1,:,1)); hold on; plot(ideal_force(1,:));
-figure; plot(adapt_forces(1,:,10)); hold on; plot(ideal_force(1,:));
-figure; plot(adapt_forces(1,:,20)); hold on; plot(ideal_force(1,:));
-figure; plot(adapt_forces(1,:,30)); hold on; plot(ideal_force(1,:));
-figure; plot(adapt_forces(1,:,40)); hold on; plot(ideal_force(1,:));
-figure; plot(adapt_forces(1,:,50)); hold on; plot(ideal_force(1,:));
-
-% force compensation progression
-adapt_forces_area = squeeze(sum(adapt_forces,2));
-ideal_force_area  = squeeze(sum(ideal_force,2));
-figure; plot(adapt_forces_area(1,:)/ideal_force_area(1)); grid;
-xlabel('Trials'); ylabel('Force Compensation');
-
-figure;
-hist3([saveVx' saveVy']);
-
-figure;
-plot(sqrt(r_actual(:,1).^2 + r_actual(:,2).^2)); hold on
-plot(sqrt(v_actual(:,1).^2 + v_actual(:,2).^2));
-% plot(sqrt(a_actual(:,1).^2 + a_actual(:,2).^2));
-legend('position', 'velocity');
+% % force compendaton graphs
+% load('idealForce1.mat');
+% figure; plot(adapt_forces(1,:,1)); hold on; plot(ideal_force(1,:));
+% figure; plot(adapt_forces(1,:,10)); hold on; plot(ideal_force(1,:));
+% figure; plot(adapt_forces(1,:,20)); hold on; plot(ideal_force(1,:));
+% figure; plot(adapt_forces(1,:,30)); hold on; plot(ideal_force(1,:));
+% figure; plot(adapt_forces(1,:,40)); hold on; plot(ideal_force(1,:));
+% figure; plot(adapt_forces(1,:,50)); hold on; plot(ideal_force(1,:));
+% 
+% % force compensation progression
+% adapt_forces_area = squeeze(sum(adapt_forces,2));
+% ideal_force_area  = squeeze(sum(ideal_force,2));
+% figure; plot(adapt_forces_area(1,:)/ideal_force_area(1)); grid;
+% xlabel('Trials'); ylabel('Force Compensation');
+% 
+% figure;
+% hist3([saveVx' saveVy']);
+% 
+% figure;
+% plot(sqrt(r_actual(:,1).^2 + r_actual(:,2).^2)); hold on
+% plot(sqrt(v_actual(:,1).^2 + v_actual(:,2).^2));
+% % plot(sqrt(a_actual(:,1).^2 + a_actual(:,2).^2));
+% legend('position', 'velocity');

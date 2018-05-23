@@ -144,7 +144,7 @@ specific trials for the whole trajectory. Figure 6 shows the coverage percentage
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceTrials.png" alt="Fig1">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceTrials.png" alt="Fig5">
     <figcaption align="center"> 
         Fig 5. force compensation during trajectory for trial number 1, 10, 20, 30, and 50
     </figcaption>
@@ -152,10 +152,17 @@ specific trials for the whole trajectory. Figure 6 shows the coverage percentage
 
 <p align="center">
 	<br>
-	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceCompensation.jpg" alt="Fig1">
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/ForceCompensation.jpg" alt="Fig6">
     <figcaption align="center"> 
         Fig 6. Froce compensation percentage over trials
     </figcaption>
+</p>
+
+Below is a short illustration of simulation.
+
+<p align="center">
+	<br>
+	<img src="https://github.com/mohammadbashiri93/BayesianMotorAdaptation/blob/master/Figures/sim.gif" alt="Fig7">
 </p>
 
 ### Acknowledgment
