@@ -183,4 +183,4 @@ kind supervision throughout this project. We also, deeply appreciate Justinas Ce
 invaluable support for the course, as well as the project.
 
 ### References
-[1] Shadmeh's work on generalizations
+[1] Shadmehr, Reza, and Ferdinando A. Mussa-Ivaldi. "Adaptive representation of dynamics during learning of a motor task." Journal of Neuroscience 14, no. 5 (1994): 3208-3224.
